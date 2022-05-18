@@ -1,0 +1,12 @@
+version: "3.9"
+
+services:
+  python:
+    image: docker-examples/python:latest
+    build: .
+  python-cli:
+    image: docker-examples/python:latest
+    build: .
+    entrypoint: /bin/bash
+    volumes:
+      - $PWD:/app
